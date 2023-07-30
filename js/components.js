@@ -88,9 +88,41 @@ export function createFieldsetWithLegend(text,type) {
 
     }else if (type === 'preview'){
 
-        para.innerHTML = 'ui'
-        newFieldset.appendChild(para);
-        newFieldset.appendChild(newLegend);
+        const previewDiv = document.createElement('div')
+        const headingPreviewDiv = document.createElement('div')
+        const imagePreviewDiv = document.createElement('div')
+        const descriptionPreviewDiv = document.createElement('div')
+        const downloadDiv = document.createElement('div')
+
+        const headingPreviewDivParagraph = document.createElement('p')
+        const posterImagePreviewDivImage = document.createElement('img')
+        const descriptionPreviewDivParagraph = document.createElement('p')
+        const downloadPoster = document.createElement('a')
+
+
+        headingPreviewDivParagraph.id = 'headingPreviewDivParagraphId'
+        posterImagePreviewDivImage.id = 'posterImagePreviewDivImageId'
+        descriptionPreviewDivParagraph.id = 'descriptionPreviewDivParagraphId'
+        downloadPoster.id = 'posterDownloadId'
+        downloadPoster.innerText = 'Download'
+
+        headingPreviewDiv.appendChild(headingPreviewDivParagraph)
+        imagePreviewDiv.appendChild(posterImagePreviewDivImage)
+        descriptionPreviewDiv.appendChild(descriptionPreviewDivParagraph)
+        downloadDiv.appendChild(downloadPoster)
+
+
+        previewDiv.appendChild(headingPreviewDiv)
+        previewDiv.appendChild(imagePreviewDiv)
+        previewDiv.appendChild(descriptionPreviewDiv)
+        previewDiv.appendChild(downloadDiv)
+
+        previewDiv.classList.add('px-12')
+        headingPreviewDivParagraph.classList.add('text-5xl')
+
+        newFieldset.appendChild(newLegend)
+        newFieldset.appendChild(previewDiv)
+
     }
 
     newFieldset.classList.add('w-1/2','border', 'py-4', 'rounded', 'flex-auto');

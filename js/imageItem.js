@@ -46,7 +46,7 @@ export function imageItem (){
     const inputFieldImage = document.createElement('input');
     const icon = document.createElement('i')
     inputFieldImage.type = 'file';
-    inputFieldImage.id = 'headingInputTextFieldId';
+    inputFieldImage.id = 'headingInputImageFieldId';
 
     paragraphOneSpan.innerHTML = 'Click to upload or drag and drop';
     paragraphTwo.innerHTML = 'SVG, PNG, JPG or GIF (MAX. 800x400px)';
