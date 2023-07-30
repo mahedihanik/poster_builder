@@ -89,9 +89,9 @@ export function createFieldsetWithLegend(text,type) {
     }else if (type === 'preview'){
 
         const previewDiv = document.createElement('div')
-        const headingPreviewDiv = document.createElement('div')
-        const imagePreviewDiv = document.createElement('div')
-        const descriptionPreviewDiv = document.createElement('div')
+        const contentsPreviewDiv = document.createElement('div')
+        // const imagePreviewDiv = document.createElement('div')
+        // const descriptionPreviewDiv = document.createElement('div')
         const downloadDiv = document.createElement('div')
 
         const headingPreviewDivParagraph = document.createElement('p')
@@ -99,26 +99,27 @@ export function createFieldsetWithLegend(text,type) {
         const descriptionPreviewDivParagraph = document.createElement('p')
         const downloadPoster = document.createElement('a')
 
-
+        contentsPreviewDiv.id = 'contentsPreviewDivId'
         headingPreviewDivParagraph.id = 'headingPreviewDivParagraphId'
         posterImagePreviewDivImage.id = 'posterImagePreviewDivImageId'
         descriptionPreviewDivParagraph.id = 'descriptionPreviewDivParagraphId'
         downloadPoster.id = 'posterDownloadId'
         downloadPoster.innerText = 'Download'
 
-        headingPreviewDiv.appendChild(headingPreviewDivParagraph)
-        imagePreviewDiv.appendChild(posterImagePreviewDivImage)
-        descriptionPreviewDiv.appendChild(descriptionPreviewDivParagraph)
+        contentsPreviewDiv.appendChild(headingPreviewDivParagraph)
+        contentsPreviewDiv.appendChild(posterImagePreviewDivImage)
+        contentsPreviewDiv.appendChild(descriptionPreviewDivParagraph)
         downloadDiv.appendChild(downloadPoster)
 
 
-        previewDiv.appendChild(headingPreviewDiv)
-        previewDiv.appendChild(imagePreviewDiv)
-        previewDiv.appendChild(descriptionPreviewDiv)
+        previewDiv.appendChild(contentsPreviewDiv)
+        // previewDiv.appendChild(imagePreviewDiv)
+        // previewDiv.appendChild(descriptionPreviewDiv)
         previewDiv.appendChild(downloadDiv)
 
         previewDiv.classList.add('px-12')
-        headingPreviewDivParagraph.classList.add('text-5xl')
+        headingPreviewDivParagraph.classList.add('text-5xl','text-orange-600')
+        downloadPoster.classList.add('hover:cursor-pointer')
 
         newFieldset.appendChild(newLegend)
         newFieldset.appendChild(previewDiv)
