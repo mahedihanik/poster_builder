@@ -13,13 +13,13 @@ export function headingItem (){
     inputFieldHeading.id = 'headingInputTextFieldId';
 
 
-    headingTextFieldButtonInnerDivFirst.appendChild(headingActionButton('Left','fa-align-left','rounded-l-md'))
-    headingTextFieldButtonInnerDivFirst.appendChild(headingActionButton('Center','fa-align-center','rounded-0'))
-    headingTextFieldButtonInnerDivFirst.appendChild(headingActionButton('Right','fa-align-right','rounded-r-md'))
+    headingTextFieldButtonInnerDivFirst.appendChild(headingActionButton('Left','fa-align-left','rounded-l-md','headingTextLeftButtonId','left'))
+    headingTextFieldButtonInnerDivFirst.appendChild(headingActionButton('Center','fa-align-center','rounded-0','headingTextCenterButtonId','center'))
+    headingTextFieldButtonInnerDivFirst.appendChild(headingActionButton('Right','fa-align-right','rounded-r-md','headingTextRightButtonId','right'))
 
-    headingTextFieldButtonInnerDivSecond.appendChild(headingActionButton('Blue','fa-palette','rounded-l-md'))
-    headingTextFieldButtonInnerDivSecond.appendChild(headingActionButton('Black','fa-palette','rounded-0'))
-    headingTextFieldButtonInnerDivSecond.appendChild(headingActionButton('Green','fa-palette','rounded-r-md'))
+    headingTextFieldButtonInnerDivSecond.appendChild(headingActionButton('Blue','fa-palette','rounded-l-md','headingTextBlueButtonId','blue'))
+    headingTextFieldButtonInnerDivSecond.appendChild(headingActionButton('Black','fa-palette','rounded-0','headingTextBlackButtonId','black'))
+    headingTextFieldButtonInnerDivSecond.appendChild(headingActionButton('Green','fa-palette','rounded-r-md','headingTextGreenButtonId','green'))
 
     headingTextFieldButtonDiv.appendChild(headingTextFieldButtonInnerDivFirst)
     headingTextFieldButtonDiv.appendChild(headingTextFieldButtonInnerDivSecond)

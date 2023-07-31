@@ -1,10 +1,11 @@
-export function headingActionButton (innerHtml,icon,rounded){
+export function headingActionButton (innerHtml,icon,rounded,id,value){
     const buttonIconTag = document.createElement('i');
     const buttonTextSpanTag = document.createElement('span');
     const buttonIconSpanTag = document.createElement('span');
 
     const button = document.createElement('button');
-
+    button.id = id;
+    button.value = value;
     buttonTextSpanTag.innerHTML=innerHtml;
     buttonIconSpanTag.appendChild(buttonIconTag);
 
