@@ -107,8 +107,7 @@ document.getElementById('posterDownloadId').addEventListener('click', function()
     ctx.fillText(textHeading, 10, 40); // Customize text position
         // Draw the image on the canvas
     ctx.drawImage(image, 0, 50, image.width, image.height); // Adjust the y-coordinate as needed for the desired spacing
-    console.log(canvas.height)
-    console.log(canvas.height)
+
     // Draw the text on the canvas with the retrieved font size
     ctx.font = `${fontSize} Arial`; // Customize font style and size
     ctx.fillStyle = fontColor; // Customize text color
