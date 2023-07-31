@@ -46,6 +46,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const textInput = document.getElementById('descriptionTextAreaId');
+    const previewContainer = document.getElementById('descriptionPreviewDivParagraphId');
+
+    textInput.addEventListener('input', () => {
+        previewContainer.textContent = textInput.value;
+    });
+});
+
 // document.getElementById('posterDownloadId').addEventListener('click', function() {
 //     // Get the div element and the image inside it
 //     const div = document.getElementById('contentsPreviewDivId');
@@ -106,12 +116,12 @@ document.getElementById('posterDownloadId').addEventListener('click', function()
     ctx.fillStyle = fontColor; // Customize text color
     ctx.fillText(textHeading, 10, 40); // Customize text position
         // Draw the image on the canvas
-    ctx.drawImage(image, 0, 50, image.width, image.height); // Adjust the y-coordinate as needed for the desired spacing
+    ctx.drawImage(image, 0, 50, image.width, 450); // Adjust the y-coordinate as needed for the desired spacing
 
     // Draw the text on the canvas with the retrieved font size
     ctx.font = `${fontSize} Arial`; // Customize font style and size
     ctx.fillStyle = fontColor; // Customize text color
-    ctx.fillText(textHeading, 10, image.height+50); // Customize text position
+    ctx.fillText(textHeading, 10, image.height + 30); // Customize text position
         // Convert canvas to data URL
         document.getElementById('posterDownloadId').href = canvas.toDataURL();
         document.getElementById('posterDownloadId').download = 'combined_image.png'; // Customize the file name and extension

@@ -3,6 +3,7 @@ import { headingActionButton } from "./headingActionButtons.js";
 import { itemsLayout } from "./itemsLayout.js";
 import { headingItem } from "./headingItem.js";
 import { imageItem } from "./imageItem.js";
+import { descriptionItem } from "./descriptionItem.js";
 
 export function createFieldsetWithLegend(text,type) {
     // Create the fieldset element
@@ -63,6 +64,7 @@ export function createFieldsetWithLegend(text,type) {
         // nestedFieldsetDiv.appendChild(crossButton);
         newFieldset.appendChild(itemsLayout('Heading','headingFieldsetId','headingCrossButtonId',headingItem()))
         newFieldset.appendChild(itemsLayout('Poster Image','imageFieldsetId','imageCrossButtonId',imageItem()))
+        newFieldset.appendChild(itemsLayout('Description','descriptionFieldsetId','descriptionCrossButtonId',descriptionItem()))
 
         newFieldset.appendChild(heading);
         newFieldset.appendChild(actionButtonsDiv)
@@ -96,13 +98,14 @@ export function createFieldsetWithLegend(text,type) {
 
         const headingPreviewDivParagraph = document.createElement('p')
         const posterImagePreviewDivImage = document.createElement('img')
-        const descriptionPreviewDivParagraph = document.createElement('p')
+        const descriptionPreviewDivParagraph = document.createElement('textarea')
         const downloadPoster = document.createElement('a')
 
         contentsPreviewDiv.id = 'contentsPreviewDivId'
         headingPreviewDivParagraph.id = 'headingPreviewDivParagraphId'
         posterImagePreviewDivImage.id = 'posterImagePreviewDivImageId'
         descriptionPreviewDivParagraph.id = 'descriptionPreviewDivParagraphId'
+        descriptionPreviewDivParagraph.rows = 4;
         downloadPoster.id = 'posterDownloadId'
         downloadPoster.innerText = 'Download'
 
@@ -117,9 +120,14 @@ export function createFieldsetWithLegend(text,type) {
         // previewDiv.appendChild(descriptionPreviewDiv)
         previewDiv.appendChild(downloadDiv)
 
+        const downloadClassList = 'text-white hover:cursor-pointer bg-cyan-500 hover:bg-cyan-600 focus:ring-4 focus:ring-cyan-500 font-medium rounded-lg text-sm px-4 py-2 mr-2 mb-2';
+        const downloadClassListArray = downloadClassList.split(' ')
         previewDiv.classList.add('px-12')
-        headingPreviewDivParagraph.classList.add('text-5xl','text-orange-600')
-        downloadPoster.classList.add('hover:cursor-pointer')
+        headingPreviewDivParagraph.classList.add('text-5xl','text-orange-600','mt-8')
+        posterImagePreviewDivImage.classList.add('mt-6')
+        descriptionPreviewDivParagraph.classList.add('resize-none','bg-inherit','mt-2')
+        downloadPoster.classList.add(...downloadClassListArray)
+        downloadDiv.classList.add('absolute' ,'bottom-24')
 
         newFieldset.appendChild(newLegend)
         newFieldset.appendChild(previewDiv)
