@@ -1,4 +1,4 @@
-export function headingActionButton (innerHtml,icon,rounded,id,value){
+export const headingActionButton = (innerHtml,icon,rounded,id,value) => {
     const buttonIconTag = document.createElement('i');
     const buttonTextSpanTag = document.createElement('span');
     const buttonIconSpanTag = document.createElement('span');

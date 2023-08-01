@@ -1,4 +1,4 @@
-export function actionButton (buttonText, buttonId, buttonBackgroundColor, buttonTextColor, hoverButtonBackgroundColor) {
+export const actionButton = (buttonText, buttonId, buttonBackgroundColor, buttonTextColor, hoverButtonBackgroundColor) => {
     const button = document.createElement('button');
     button.innerHTML = buttonText;
     button.setAttribute('id',buttonId)

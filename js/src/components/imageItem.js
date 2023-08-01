@@ -1,4 +1,4 @@
-export function imageItem (){
+export const imageItem = () => {
     const nestedFieldsetInnerDiv = document.createElement('div')
     const fileLabel = document.createElement('label')
     const fileDiv = document.createElement('div')

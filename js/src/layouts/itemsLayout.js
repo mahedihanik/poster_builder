@@ -1,4 +1,4 @@
-export function itemsLayout (legendText,fieldSetId,crossButtonId,item){
+export const itemsLayout = (legendText,fieldSetId,crossButtonId,item) => {
     const nestedFieldset = document.createElement('fieldset');
     nestedFieldset.id = fieldSetId
     // Create the legend element

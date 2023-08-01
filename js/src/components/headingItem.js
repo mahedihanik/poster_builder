@@ -1,6 +1,6 @@
 import { headingActionButton } from "../layouts/headingActionButtons.js";
 
-export function headingItem (){
+export const headingItem = () => {
     const nestedFieldsetInnerDiv = document.createElement('div')
     const headingTextFieldDiv = document.createElement('div')
     const headingTextFieldButtonDiv = document.createElement('div')

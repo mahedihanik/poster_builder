@@ -1,4 +1,4 @@
-export function descriptionItem (){
+export const descriptionItem = () => {
     const nestedFieldsetInnerDiv = document.createElement('div')
     const textarea = document.createElement('textarea')
     textarea.id = 'descriptionTextAreaId';
