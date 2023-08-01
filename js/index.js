@@ -1,6 +1,6 @@
 // main.js - Import the createFieldsetWithLegend function and use it
 
-import {createFieldsetWithLegend} from './components.js';
+import {createFieldsetWithLegend} from './src/pages/components.js';
 
 const appDiv = document.getElementById('app');
 const fieldsetWithLegend1 = createFieldsetWithLegend('Components','components');

@@ -1,8 +1,8 @@
-import { actionButton } from './actionButton.js';
-import { itemsLayout } from "./itemsLayout.js";
-import { headingItem } from "./headingItem.js";
-import { imageItem } from "./imageItem.js";
-import { descriptionItem } from "./descriptionItem.js";
+import { actionButton } from '../layouts/actionButton.js';
+import { itemsLayout } from "../layouts/itemsLayout.js";
+import { headingItem } from "../components/headingItem.js";
+import { imageItem } from "../components/imageItem.js";
+import { descriptionItem } from "../components/descriptionItem.js";
 
 export const createFieldsetWithLegend = (text,type) => {
     // Create the fieldset element
